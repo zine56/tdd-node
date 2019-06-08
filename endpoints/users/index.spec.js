@@ -68,5 +68,29 @@ describe("Endpoints", () => {
         );
       });
     });
+
+    describe("delete", () => {
+      it("delete a resource", async () => {
+        const req = {
+          params: {
+            id: 12
+          }
+        };
+
+        const res = {
+          sendStatus: jest.fn()
+        };
+
+        const axios = {
+          delete: jest.fn().mockResolvedValue()
+        };
+
+        await handlers({axios}).delete(req, res);
+
+        expect(res.sendStatus).toHaveBeenCalledWith(204);
+        expect(axios.delete).toHaveBeenCalledWith('https://jsonplaceholder.typicode.com/users/12')
+        
+      });
+    });
   });
 });
