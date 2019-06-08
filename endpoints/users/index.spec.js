@@ -42,5 +42,31 @@ describe("Endpoints", () => {
         );
       });
     });
+
+    describe("put", () => {
+      it("updates resources", async () => {
+        const axios = {
+          put: jest.fn().mockResolvedValue({ data: 1 })
+        };
+
+        const res = {
+          sendStatus: jest.fn()
+        };
+        const req = {
+          body: "put resource",
+          params: {
+            id: 12
+          }
+        };
+
+        await handlers({ axios }).put(req, res);
+
+        expect(res.sendStatus).toHaveBeenCalledWith(204);
+        expect(axios.put).toHaveBeenCalledWith(
+          "https://jsonplaceholder.typicode.com/users/12",
+          "put resource"
+        );
+      });
+    });
   });
 });
