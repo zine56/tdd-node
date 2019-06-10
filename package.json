@@ -5,7 +5,8 @@
   "author": "Martin Hernan Algañaraz <idcmardelplata@gmail.com> (https://mardecode.herokuapp.com)",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
     "axios": "^0.19.0",
