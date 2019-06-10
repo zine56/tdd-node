@@ -14,3 +14,5 @@ const postHandlers = posts({ axios });
 app.post("/", authenticate, postHandlers.post);
 
 app.listen(port, () => console.log(`Example app listenning on port ${port}`));
+
+module.exports = app;
