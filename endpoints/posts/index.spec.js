@@ -1,9 +1,3 @@
-//{
-//    "userId": 1,
-//    "id": 1,
-//    "title": "titulo",
-//    "body": "Cuerpo del post"
-//  }
 const postHandlers = require("./index");
 
 describe("Endpoints", () => {
