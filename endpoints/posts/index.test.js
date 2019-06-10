@@ -20,7 +20,7 @@ describe("server", () => {
           .post("/")
           .send({ userId: 100 })
           .set("user_id", 1)
-          .send("Content-Type", "application/json");
+          .set("Content-Type", "application/json");
         expect(response.statusCode).toEqual(400);
       });
     });
