@@ -1,4 +1,5 @@
 build:
+  image: node:10
   script:
-    - /bin/true
-
+    - npm install
+    - node ./server.js
