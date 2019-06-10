@@ -68,7 +68,7 @@ describe("Endpoints", () => {
       await postHandlers({ axios }).post(req, res);
 
       expect(axios.post).not.toHaveBeenCalled();
-      expect(res.sendStatus).toHaveBeenCalledWith(500);
+      expect(res.sendStatus).toHaveBeenCalledWith(400);
     });
   });
 });
