@@ -13,6 +13,6 @@ const postHandlers = posts(services);
 
 app.post("/", authenticate, postHandlers.post);
 
-app.listen(port, () => console.log(`Example app listenning on port ${port}`));
+app.listen(port, () => console.log(`La aplicacion esta escuchando en el puerto ${port}`));
 
 module.exports = app;
