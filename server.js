@@ -3,6 +3,7 @@ const parser = require("body-parser");
 const services = require("./services");
 const { posts } = require("./endpoints");
 const { authenticate } = require("./middlewares");
+
 const app = express();
 const port = 3000;
 
